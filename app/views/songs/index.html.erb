@@ -1,0 +1,8 @@
+  <%# index page lists songs in 'Artist Name - Song Title' format %>
+  
+<% @songs.each do |s| %>
+
+  <a href="<%= song_path(s) %>">
+  <li><%= s.artist.name %> - <%= s.title %></li></a>
+
+<% end %>

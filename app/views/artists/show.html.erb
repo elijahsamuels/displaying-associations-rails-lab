@@ -1,0 +1,11 @@
+  <%# show page links to the artist's songs by title
+  lists all of the artist's songs  %>
+
+<h1><%= @artist.name %></h1>
+<ul>
+  <% @artist.songs.each do |song| %> <!-- @artist.songs is reaching into the songs table through the artist table, and from there, you can iterate through the attributes of the songs  -->
+    <li>
+      <%= link_to song.title, song_path(song) %>
+    </li>
+  <% end %>
+</ul>
